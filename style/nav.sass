@@ -1,0 +1,144 @@
+//Nav
+.container
+    @include orientacion(flex, column)
+    height: 6.6rem
+    width: 100%
+    &_superior
+        background-color: $navTop
+        color: #fff
+        @include orientacion(flex, null ,space-between, center)
+        &_left
+            @include orientacion(flex, null, center,center)
+            gap: 2rem
+            width: 17rem
+            height: 4rem
+            &_img
+                @include orientacion(flex, null, center, center)
+                height: 3.7rem
+                border: 1px solid transparent
+                &-img
+                    height: 2.5rem
+            &_location
+                @include orientacion(flex, null, center, center)
+                height: 3.7rem
+                border: 1px solid transparent
+                &_img
+                    @include orientacion(flex, null , end , end )
+                    height: 100%
+                    margin-bottom: 10px
+                    &-img
+        &_center
+            @include orientacion(flex, null , center , center)
+            width: 77.73rem
+            height: 2.8rem
+            border-radius: 7px
+            margin-top: 1px
+            input
+                height: 2.6rem
+                flex: auto
+                padding-left: .5rem
+                outline: none
+                border: none
+            
+            &_todo
+                @include orientacion(flex, null , center , center)
+                @include posicion(null, null, auto , 2.6rem , null , 5px 0px 0px 5px)
+                background: #F3F3F3 
+                
+                border-right: 1px solid #7272727c
+                &_text
+                    @include orientacion(flex, null , center , center)
+                    @include posicion(null , null, auto , 2.5rem )
+                    font-size: .8rem
+                    color: #727272
+                    &_select
+                        position: absolute
+                        display: block
+                        top: -1px
+                        left: 0
+                        height: 35px
+                        width: auto
+                        font-family: inherit
+                        outline: 0
+                        margin: 0
+                        padding: 0
+                        cursor: pointer
+                        opacity: 0
+                        filter: alpha(opacity=0)
+                        
+                        border: 0
+                        line-height: 35px
+            &_lupa
+                @include orientacion(flex, null , center , center)
+                @include posicion(null, null, 2.5rem , 2.6rem , null , 0px 5px 5px 0px)
+                background: #FEBD69
+                p
+                &-img
+                    color: #000
+        &_center:focus-within
+            border: 2px #FF9900 solid
+        &_right
+            @include orientacion(flex, null , center , center)
+            width: 29rem
+            gap: 1rem
+            &_idioma
+                @include orientacion(flex, null, center, center)
+                height: 3.7rem
+                border: 1px solid transparent
+                cursor: pointer
+                &-bandera
+                    width: 1.5rem
+            &_identidad
+                @include orientacion(flex, null, center, center)
+                height: 3.7rem
+                border: 1px solid transparent
+                cursor: pointer
+                width: 8.6rem
+                p
+                    font-size: .8rem
+                    span
+                        font-size: .9rem
+                        font-weight: bold
+            &_pedidos
+                @include orientacion(flex, null, center, center)
+                height: 3.7rem
+                border: 1px solid transparent
+                cursor: pointer
+                p
+                    font-size: .8rem
+                    span
+                        font-size: .9rem
+                        font-weight: bold
+            &_carrito
+                @include orientacion(flex, null, center, center)
+                height: 3.7rem
+                border: 1px solid transparent
+                cursor: pointer
+                p
+                    font-weight: bold
+    &_down
+        @include orientacion(flex, null , space-between)
+        background-color: $navDown
+        height: 2.6rem
+        &_left
+            @include orientacion(flex, null , center, center)
+            margin-left: .5rem
+            a
+                @include orientacion(flex, null , center, center)
+                margin-left: 2rem
+                color: #fff
+                padding: 8px 5px
+                border: 1px solid transparent
+        &_right
+            @include orientacion(flex, null , center, center)
+            margin-right: .5rem
+            a
+                @include orientacion(flex, null , center, center)
+                margin-right: 2rem
+                color: #fff
+                border: 1px solid transparent
+                padding: 2px 5px
+                border-radius: 3px
+            a:hover
+                border: 1px solid #fff
+                padding: 2px 5px
