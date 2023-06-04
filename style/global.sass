@@ -1,0 +1,43 @@
+//Globales
+$navTop: #131921
+$navDown: #232F3E
+$fondoBody: #E3E6E6
+$footerTopTop: #37475A
+$footerTop: #232F3E
+$footerDown: #131A22
+@mixin orientacion($display:flex, $direcion:null, $justify:null, $aling:null, $columns:null, $place:null )
+    display: $display
+    justify-content: $justify
+    flex-direction: $direcion
+    align-items: $aling
+    grid-template-columns:  $columns
+    place-content: $place
+@mixin posicion($margin:null, $padding:null, $width:null, $height:null, $border:null, $border-radius:null )
+    margin: $margin
+    padding: $padding
+    width: $width
+    height: $height
+    border: $border
+    border-radius: $border-radius
+@for $contador from 1 to 11
+    .container_down_left-#{$contador}:hover
+        border: 1px solid #fff
+        border-radius: 3px
+@for $contador from 1 to 7
+    .cajaForHover-#{$contador}:hover
+        border: 1px solid #fff
+        border-radius: 2px
+*
+    margin: 0
+    top: 0
+    box-sizing: border-box
+    font-size: 15px
+    text-decoration: none
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+body
+    background: $fondoBody
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100vh
+    overflow-x: hidden
