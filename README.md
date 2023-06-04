@@ -1,0 +1,2 @@
+# AmazonCopy
+ clon de amazon
